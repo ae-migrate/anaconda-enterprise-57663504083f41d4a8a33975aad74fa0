@@ -1,0 +1,28 @@
+name: Environment Tester
+description: Prints useful information about mounts, environment, etc. for debugging
+commands:
+  default:
+    unix: python ${PROJECT_DIR}/hello.py
+    windows: python %PROJECT_DIR%\hello.py
+    supports_http_options: true
+  run:
+    unix: python ${PROJECT_DIR}/run.py
+    windows: python %PROJECT_DIR%\run.py
+env_specs:
+  py38_ro:
+    packages:
+    - tabulate
+    - ipykernel
+  anaconda201908_py37: {}
+  anaconda202011_py37: {}
+  anaconda202011_py38: {}
+  anaconda50_hadoop: {}
+  anaconda50_impyla: {}
+  anaconda50_py36: {}
+  anaconda50_r: {}
+  python_27: {}
+  python_35: {}
+  python_36: {}
+  python_37: {}
+  python_38: {}
+  python_39: {}
